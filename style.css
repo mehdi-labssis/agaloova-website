@@ -504,3 +504,685 @@ nav a:hover {
     }
 
 }
+/* =========================
+   03 — THE WORLD
+========================= */
+
+.world {
+    background: #080808;
+    padding: 140px 8%;
+    color: #f2eadc;
+}
+
+.world-heading {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 80px;
+}
+
+.world-heading .section-number {
+    grid-column: 1 / -1;
+    color: #e34a2f;
+    font-size: 14px;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.world-heading h2 {
+    font-size: clamp(60px, 8vw, 130px);
+    line-height: 0.85;
+    letter-spacing: -5px;
+    margin: 0;
+    font-weight: 800;
+}
+
+.world-intro {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #8f8f8f;
+    max-width: 480px;
+}
+
+
+/* WORLD GRID */
+
+.world-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    background: #242424;
+    border: 1px solid #242424;
+}
+
+
+/* CARDS */
+
+.world-card {
+    min-height: 420px;
+    background: #0d0d0d;
+    text-decoration: none;
+    color: #f2eadc;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 45px;
+
+    transition:
+        background 0.4s ease,
+        transform 0.4s ease;
+}
+
+.world-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at 70% 20%,
+            rgba(227, 74, 47, 0.10),
+            transparent 45%
+        );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.world-card:hover::before {
+    opacity: 1;
+}
+
+.world-card:hover {
+    background: #121212;
+}
+
+
+/* CARD CONTENT */
+
+.world-card-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.world-card-content span {
+    display: block;
+    color: #e34a2f;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 100px;
+}
+
+.world-card h3 {
+    font-size: clamp(45px, 5vw, 85px);
+    line-height: 0.9;
+    letter-spacing: -3px;
+    margin: 0 0 20px;
+    transition: transform 0.4s ease;
+}
+
+.world-card p {
+    color: #888;
+    font-size: 16px;
+    margin: 0;
+}
+
+.world-card:hover h3 {
+    transform: translateX(12px);
+}
+
+
+/* SPECIAL CARD SIZES */
+
+.world-card-large {
+    min-height: 560px;
+}
+
+.world-card-wide {
+    grid-column: 1 / -1;
+    min-height: 400px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .world {
+        padding: 100px 6%;
+    }
+
+    .world-heading {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .world-heading h2 {
+        font-size: 60px;
+        letter-spacing: -3px;
+    }
+
+    .world-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .world-card,
+    .world-card-large,
+    .world-card-wide {
+        grid-column: auto;
+        min-height: 350px;
+        padding: 30px;
+    }
+
+    .world-card-content span {
+        margin-bottom: 80px;
+    }
+
+    .world-card h3 {
+        font-size: 48px;
+    }
+}
+/* ========================================
+   AGALOOVA — CITIES PAGE
+======================================== */
+
+.cities-page {
+    background: #080808;
+    color: #f4efe6;
+    min-height: 100vh;
+}
+
+/* HEADER */
+
+.cities-header {
+    padding: 150px 7% 90px;
+    max-width: 1400px;
+}
+
+.cities-header .section-number {
+    font-size: 12px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #d85b36;
+    margin-bottom: 35px;
+}
+
+.cities-header h1 {
+    font-size: clamp(70px, 10vw, 160px);
+    line-height: 0.82;
+    letter-spacing: -5px;
+    font-weight: 900;
+    margin: 0 0 45px;
+}
+
+.cities-header > p:last-child {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #aaa39a;
+}
+
+
+/* ========================================
+   CITY GRID
+======================================== */
+
+.cities-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+/* CITY CARD */
+
+.city-card {
+    position: relative;
+    display: block;
+    height: 620px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    background: #111;
+}
+
+
+/* IMAGE */
+
+.city-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+    transition:
+        transform 0.9s cubic-bezier(.2,.7,.2,1),
+        filter 0.6s ease;
+
+    filter: brightness(0.72);
+}
+
+
+/* DARK CINEMATIC GRADIENT */
+
+.city-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.88) 0%,
+            rgba(0,0,0,.30) 45%,
+            rgba(0,0,0,.05) 75%
+        );
+
+    z-index: 1;
+}
+
+
+/* TEXT */
+
+.city-overlay {
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    bottom: 45px;
+
+    z-index: 2;
+}
+
+.city-overlay span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #e25d38;
+    margin-bottom: 12px;
+}
+
+.city-overlay h2 {
+    margin: 0;
+
+    font-size: clamp(35px, 4vw, 65px);
+    line-height: .95;
+
+    letter-spacing: -2px;
+    font-weight: 900;
+
+    color: #fff;
+}
+
+.city-overlay p {
+    margin: 12px 0 0;
+
+    font-size: 11px;
+    letter-spacing: 4px;
+
+    color: rgba(255,255,255,.65);
+}
+
+
+/* ========================================
+   HOVER
+======================================== */
+
+.city-card:hover img {
+    transform: scale(1.06);
+    filter: brightness(0.95);
+}
+
+.city-card:hover .city-overlay h2 {
+    transform: translateX(10px);
+}
+
+.city-overlay h2 {
+    transition: transform .4s ease;
+}
+
+
+/* thin borders */
+
+.city-card:nth-child(odd) {
+    border-right: 1px solid rgba(255,255,255,.12);
+}
+
+.city-card {
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 800px) {
+
+    .cities-header {
+        padding: 120px 24px 60px;
+    }
+
+    .cities-header h1 {
+        font-size: 62px;
+        letter-spacing: -3px;
+    }
+
+    .cities-header > p:last-child {
+        font-size: 15px;
+    }
+
+    .cities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .city-card {
+        height: 520px;
+        border-right: none !important;
+    }
+
+    .city-overlay {
+        left: 25px;
+        right: 25px;
+        bottom: 30px;
+    }
+
+    .city-overlay h2 {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+}
+/* ==================================================
+   CASABLANCA — CITY PAGE
+================================================== */
+
+.city-page {
+    margin: 0;
+    background: #080808;
+    color: #f4efe6;
+}
+
+.city-nav {
+    height: 100px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #080808;
+}
+
+.city-logo {
+    color: #f4efe6;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 6px;
+}
+
+.city-nav nav {
+    display: flex;
+    gap: 45px;
+}
+
+.city-nav nav a {
+    color: #bdb6ad;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.city-nav nav a:hover {
+    color: #f05a32;
+}
+
+
+/* HERO */
+
+.city-hero {
+    position: relative;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: flex-end;
+    padding: 7%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.casablanca-hero {
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.85) 0%,
+            rgba(0,0,0,.15) 55%,
+            rgba(0,0,0,.05) 100%
+        ),
+        url("images/cities/casablanca/casablanca1.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.city-hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.city-hero-text span {
+    display: block;
+    color: #f05a32;
+    font-size: 13px;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.city-hero-text h1 {
+    margin: 0;
+    font-size: clamp(65px, 10vw, 160px);
+    line-height: .82;
+    letter-spacing: -5px;
+    font-weight: 900;
+}
+
+.city-hero-text p {
+    margin: 30px 0 0;
+    font-size: 14px;
+    letter-spacing: 8px;
+    color: #ddd4c8;
+}
+
+
+/* STORY */
+
+.city-story {
+    min-height: 100vh;
+    padding: 130px 7%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #080808;
+}
+
+.city-story-number {
+    color: #f05a32;
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 35px;
+}
+
+.city-story h2 {
+    margin: 0;
+    max-width: 1000px;
+    font-size: clamp(60px, 9vw, 145px);
+    line-height: .86;
+    letter-spacing: -5px;
+}
+
+.city-story p {
+    max-width: 560px;
+    margin: 55px 0 0;
+    color: #aaa39a;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .city-nav {
+        height: 80px;
+        padding: 0 22px;
+    }
+
+    .city-logo {
+        font-size: 18px;
+        letter-spacing: 4px;
+    }
+
+    .city-nav nav {
+        gap: 18px;
+    }
+
+    .city-nav nav a {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .city-hero {
+        min-height: calc(100vh - 80px);
+        padding: 30px 22px 55px;
+    }
+
+    .casablanca-hero {
+        background-position: center;
+    }
+
+    .city-hero-text h1 {
+        font-size: 15vw;
+        letter-spacing: -3px;
+    }
+
+    .city-hero-text p {
+        font-size: 10px;
+        letter-spacing: 5px;
+    }
+
+    .city-story {
+        padding: 100px 22px;
+    }
+
+    .city-story h2 {
+        font-size: 15vw;
+        letter-spacing: -3px;
+    }
+
+    .city-story p {
+        font-size: 16px;
+    }
+}
+/* ==================================================
+   CASABLANCA — FEATURE 02
+================================================== */
+
+.city-feature {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 58% 42%;
+    background: #080808;
+    overflow: hidden;
+}
+
+.city-feature-image {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.city-feature-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+    display: block;
+    transition: transform 1.2s ease;
+}
+
+.city-feature:hover .city-feature-image img {
+    transform: scale(1.03);
+}
+
+.city-feature-text {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.city-feature-text span {
+    color: #f05a32;
+    font-size: 13px;
+    letter-spacing: 6px;
+    margin-bottom: 40px;
+}
+
+.city-feature-text h2 {
+    margin: 0;
+    color: #f4efe6;
+    font-size: clamp(60px, 7vw, 120px);
+    line-height: .85;
+    letter-spacing: -5px;
+    font-weight: 900;
+}
+
+.city-feature-text p {
+    max-width: 430px;
+    margin: 50px 0 0;
+    color: #aaa39a;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .city-feature {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .city-feature-image {
+        min-height: 65vh;
+        height: 65vh;
+    }
+
+    .city-feature-image img {
+        min-height: 0;
+        height: 100%;
+    }
+
+    .city-feature-text {
+        min-height: 70vh;
+        padding: 80px 22px;
+    }
+
+    .city-feature-text span {
+        margin-bottom: 25px;
+    }
+
+    .city-feature-text h2 {
+        font-size: 16vw;
+        letter-spacing: -3px;
+    }
+
+    .city-feature-text p {
+        margin-top: 35px;
+        font-size: 16px;
+    }
+}
