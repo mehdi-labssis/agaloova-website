@@ -1206,3 +1206,245 @@ nav.active a {
         font-size: 16px;
     }
 }
+/* ========================================
+   HERITAGE PAGE
+======================================== */
+
+.heritage-page {
+    background: #0d0d0d;
+    color: #f2eadc;
+}
+
+.heritage-main {
+    width: 100%;
+}
+
+/* HERO */
+
+.heritage-hero {
+    min-height: 100vh;
+    padding: 180px 8% 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #242424;
+}
+
+.heritage-hero .section-number {
+    color: #e34a2f;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+}
+
+.heritage-hero h1 {
+    font-size: clamp(70px, 10vw, 160px);
+    line-height: 0.85;
+    letter-spacing: -6px;
+    margin: 0 0 50px;
+}
+
+.heritage-intro {
+    color: #888;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+
+/* HERITAGE CARDS */
+
+.heritage-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.heritage-placeholder {
+    min-height: 600px;
+    padding: 50px;
+    border-right: 1px solid #242424;
+    border-bottom: 1px solid #242424;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.heritage-placeholder span {
+    color: #e34a2f;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.heritage-placeholder h2 {
+    font-size: 35px;
+    margin: 0 0 15px;
+}
+
+.heritage-placeholder p {
+    color: #888;
+    margin: 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .heritage-hero {
+        padding: 140px 25px 70px;
+        min-height: 85vh;
+    }
+
+    .heritage-hero h1 {
+        font-size: 58px;
+        letter-spacing: -3px;
+    }
+
+    .heritage-intro {
+        font-size: 15px;
+    }
+
+    .heritage-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .heritage-placeholder {
+        min-height: 420px;
+        padding: 30px 25px;
+        border-right: none;
+    }
+
+    .heritage-placeholder h2 {
+        font-size: 30px;
+    }
+}
+/* ========================================
+   TRADITIONAL STYLE — GALLERY
+======================================== */
+
+.traditional-gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    background: #242424;
+}
+
+.traditional-item {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #0d0d0d;
+}
+
+.traditional-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s ease;
+}
+
+.traditional-item:hover img {
+    transform: scale(1.025);
+}
+
+/* آخر صورة إلا كانت بوحدها */
+.traditional-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .traditional-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .traditional-item:last-child:nth-child(odd) {
+        grid-column: auto;
+    }
+}
+/* ========================================
+   TRADITIONAL PAGE — HERO
+======================================== */
+
+.traditional-page {
+    background: #0d0d0d;
+    color: #f2eadc;
+}
+
+.traditional-main {
+    padding-top: 90px;
+}
+
+.traditional-hero {
+    min-height: 75vh;
+    padding: 80px 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #242424;
+}
+
+.traditional-back {
+    color: #888;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 70px;
+    width: fit-content;
+    transition: color 0.3s ease;
+}
+
+.traditional-back:hover {
+    color: #e34a2f;
+}
+
+.traditional-hero .section-number {
+    color: #e34a2f;
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.traditional-hero h1 {
+    font-size: clamp(65px, 9vw, 150px);
+    line-height: 0.85;
+    letter-spacing: -6px;
+    margin: 0 0 45px;
+    max-width: 1100px;
+}
+
+.traditional-intro {
+    color: #888;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+
+    .traditional-main {
+        padding-top: 70px;
+    }
+
+    .traditional-hero {
+        min-height: 70vh;
+        padding: 60px 25px;
+    }
+
+    .traditional-back {
+        margin-bottom: 50px;
+    }
+
+    .traditional-hero h1 {
+        font-size: clamp(48px, 15vw, 75px);
+        letter-spacing: -3px;
+    }
+
+    .traditional-intro {
+        font-size: 16px;
+    }
+}
