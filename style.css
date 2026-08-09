@@ -1448,3 +1448,24 @@ nav.active a {
         font-size: 16px;
     }
 }
+/* ===== CHARACTERS MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+    .character-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .character-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        height: auto !important;
+    }
+
+    .character-card img {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+    }
+}
