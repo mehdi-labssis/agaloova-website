@@ -580,7 +580,7 @@ nav.active a {
 /* CARDS */
 
 .world-card {
-    min-height: 420px;
+    min-height: 320px;
     background: #0d0d0d;
     text-decoration: none;
     color: #f2eadc;
@@ -588,7 +588,7 @@ nav.active a {
     overflow: hidden;
     display: flex;
     align-items: flex-end;
-    padding: 45px;
+    padding: 35px;
 
     transition:
         background 0.4s ease,
@@ -631,11 +631,11 @@ nav.active a {
     color: #e34a2f;
     font-size: 13px;
     letter-spacing: 4px;
-    margin-bottom: 100px;
+    margin-bottom: 45px;
 }
 
 .world-card h3 {
-    font-size: clamp(45px, 5vw, 85px);
+    font-size: clamp(40px, 4vw, 65px);
     line-height: 0.9;
     letter-spacing: -3px;
     margin: 0 0 20px;
