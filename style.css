@@ -4459,3 +4459,21 @@ img {
         font-size: 38px;
     }
 }
+/* =========================================
+   TBORIDA IMAGE
+========================================= */
+
+.tborida-image-section {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.tborida-image-section img {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: zoom-in;
+}
